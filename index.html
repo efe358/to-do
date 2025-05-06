@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/ >
+			
+			<title>App_ToDo_Liste</title>
+			
+		<style>
+		
+			.die_todo_liste {
+			background-color:#D3D3D3;
+			font-size:15px;
+			margin:15px;
+			border-radius:10px;
+			padding:10px;
+			}
+			
+			.die_todo_liste_2 {
+			background-color:#F7F7F7;
+			font-size:15px;
+			margin:15px;
+			border-radius:3px;
+			padding:10px;
+			}
+			
+		</style>
+		
+				<script>
+					function einfügendenAufgabe() {
+						var neueAufgabe = document.createElement("div");
+						neueAufgabe.innerHTML = document.getElementById("adinliste").value;
+						neueAufgabe.onclick = entfernenAufgaben;
+						document.getElementById("liste").appendChild(neueAufgabe);
+					}
+					
+					function entfernenAufgaben() {
+						document.getElementById("liste").removeChild(this);
+					}
+				</script>
+		
+	</head>
+	
+	<body>
+		<h2 style="font-family:Arial;">To Do:</h2>
+		<input type="button" onclick="einfügendenAufgabe();" value="Einfügen" class="die_todo_liste"/>
+			<br/>
+			<br/>
+		<input type="text" value="Aufgabe eintippen" class="die_todo_liste_2" id="adinliste"/>
+			<br/>
+		<div id="liste" ><h3 style="font-family:Arial;">ToDo Liste:</h3></div>
+
+
+					
+	<body>
+	
+</html>
